@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, DearDeer 小鹿 算法 deardeer">
+    <meta name="keywords" content="MATLAB报错：未定义函数或变量, DearDeer 小鹿 算法 deardeer">
     <meta name="description" content="在校大学生 | 计算机科学与技术 | NEEPU">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 小鹿的博客</title>
+    <title>MATLAB报错：未定义函数或变量 | 小鹿的博客</title>
     <link rel="icon" type="image/png" href="/deerlogo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/default/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/default/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">MATLAB报错：未定义函数或变量</h1>
                 </div>
             </div>
         </div>
@@ -451,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-06-30
                 </div>
                 
 
@@ -467,20 +467,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+                <h1 id="MATLAB报错：未定义函数或变量"><a href="#MATLAB报错：未定义函数或变量" class="headerlink" title="MATLAB报错：未定义函数或变量"></a>MATLAB报错：未定义函数或变量</h1><p>最近准备数学建模比赛，学习MATLAB入门遇到了个问题：<code>未定义函数或变量 'myGcd'</code>。</p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200630173235.png" alt="MATLAB报错图片"></p>
+<p>谷歌了下试了几个方案还是没解决。</p>
+<p>参考官方的文档也没发现哪里有问题（其实是我一开始没看到）</p>
+<p>小白真心累。</p>
+<h2 id="常见错误原因"><a href="#常见错误原因" class="headerlink" title="常见错误原因"></a>常见错误原因</h2><p>先看看<strong>MATLAB官方文档</strong>：</p>
+<p>这些错误通常指示 MATLAB 在当前目录或搜索路径中找不到特定的变量或 MATLAB 程序文件。其根本原因可能是下面这些原因中的一个：</p>
+<ul>
+<li>函数的名称拼写错误。</li>
+<li>函数名称和包含函数的文件的名称不相同。</li>
+<li>未安装函数所属的工具箱。</li>
+<li>函数的搜索路径已更改。</li>
+<li>函数是您没有许可证的工具箱的一部分。</li>
+</ul>
+<p>遇到此类错误时，请按照本节所述<strong>步骤</strong>来解决问题。</p>
+<ol>
+<li><p>验证函数名称的拼写</p>
+</li>
+<li><p>确保函数名称与文件名匹配</p>
+</li>
+<li><p>确保安装了工具箱</p>
+</li>
+<li><p>验证访问函数所用的路径</p>
+</li>
+</ol>
+<p> 这里不做具体解释，详情请移步官网：<a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/calling-functions.html" target="_blank" rel="noopener">MATLAB-调用函数时的常见错误</a></p>
+<h2 id="我的解决方案"><a href="#我的解决方案" class="headerlink" title="我的解决方案"></a>我的解决方案</h2><p>当时有点急了，文档都是跳着看（真的要认真看文档啊！！！），我先是试了1，4步骤，结果都没解决问题。</p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200630173430.png" alt=""></p>
+<p>最后沉下心来，看了下自己写的几个脚本，其中写了两个函数，一个是myFun，另一个是myGcd，我在想为什么我的myFun就能用，我的myGcd就不行。看着看着发现了端倪！我的myGcd<strong>函数名称和文件名不一样</strong>！也就是MATLAB官方给的帮助文档里的第2条。</p>
+<p>我<strong>把文件名改成和函数名一样</strong>就正常使用，没有问题了！</p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200630173511.png" alt="问题解决图片"></p>
+<p>小问题多耽误半天时间，哎，希望我的经历有帮到你！</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -505,7 +542,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/DearDeer7/DearDeer7.github.io/2020/04/13/hello-world/">https://github.com/DearDeer7/DearDeer7.github.io/2020/04/13/hello-world/</a>
+                    <a href="https://github.com/DearDeer7/DearDeer7.github.io/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/">https://github.com/DearDeer7/DearDeer7.github.io/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -708,9 +745,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/">
                     <div class="card-image">
@@ -733,9 +771,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -744,6 +782,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -751,7 +790,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/04/13/hello-world/">
@@ -781,7 +820,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

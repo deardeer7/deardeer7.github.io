@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>MATLAB报错：未定义函数或变量</title>
+      <link href="/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/"/>
+      <url>/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MATLAB报错：未定义函数或变量"><a href="#MATLAB报错：未定义函数或变量" class="headerlink" title="MATLAB报错：未定义函数或变量"></a>MATLAB报错：未定义函数或变量</h1><p>最近准备数学建模比赛，学习MATLAB入门遇到了个问题：<code>未定义函数或变量 'myGcd'</code>。</p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200630173235.png" alt="MATLAB报错图片"></p><p>谷歌了下试了几个方案还是没解决。</p><p>参考官方的文档也没发现哪里有问题（其实是我一开始没看到）</p><p>小白真心累。</p><h2 id="常见错误原因"><a href="#常见错误原因" class="headerlink" title="常见错误原因"></a>常见错误原因</h2><p>先看看<strong>MATLAB官方文档</strong>：</p><p>这些错误通常指示 MATLAB 在当前目录或搜索路径中找不到特定的变量或 MATLAB 程序文件。其根本原因可能是下面这些原因中的一个：</p><ul><li>函数的名称拼写错误。</li><li>函数名称和包含函数的文件的名称不相同。</li><li>未安装函数所属的工具箱。</li><li>函数的搜索路径已更改。</li><li>函数是您没有许可证的工具箱的一部分。</li></ul><p>遇到此类错误时，请按照本节所述<strong>步骤</strong>来解决问题。</p><ol><li><p>验证函数名称的拼写</p></li><li><p>确保函数名称与文件名匹配</p></li><li><p>确保安装了工具箱</p></li><li><p>验证访问函数所用的路径</p></li></ol><p> 这里不做具体解释，详情请移步官网：<a href="https://ww2.mathworks.cn/help/matlab/matlab_prog/calling-functions.html" target="_blank" rel="noopener">MATLAB-调用函数时的常见错误</a></p><h2 id="我的解决方案"><a href="#我的解决方案" class="headerlink" title="我的解决方案"></a>我的解决方案</h2><p>当时有点急了，文档都是跳着看（真的要认真看文档啊！！！），我先是试了1，4步骤，结果都没解决问题。</p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200630173430.png" alt=""></p><p>最后沉下心来，看了下自己写的几个脚本，其中写了两个函数，一个是myFun，另一个是myGcd，我在想为什么我的myFun就能用，我的myGcd就不行。看着看着发现了端倪！我的myGcd<strong>函数名称和文件名不一样</strong>！也就是MATLAB官方给的帮助文档里的第2条。</p><p>我<strong>把文件名改成和函数名一样</strong>就正常使用，没有问题了！</p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200630173511.png" alt="问题解决图片"></p><p>小问题多耽误半天时间，哎，希望我的经历有帮到你！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/04/13/hello-world/"/>
       <url>/2020/04/13/hello-world/</url>
