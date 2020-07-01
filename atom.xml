@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>小鹿的博客</title>
+  <title>Deer&#39;s Blog</title>
   
   <subtitle>DearDeer</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/DearDeer7/DearDeer7.github.io/"/>
-  <updated>2020-06-30T09:50:19.087Z</updated>
+  <updated>2020-07-01T14:45:19.254Z</updated>
   <id>https://github.com/DearDeer7/DearDeer7.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>MATLAB报错：未定义函数或变量</title>
-    <link href="https://github.com/DearDeer7/DearDeer7.github.io/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/"/>
-    <id>https://github.com/DearDeer7/DearDeer7.github.io/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/</id>
-    <published>2020-06-30T09:36:43.259Z</published>
-    <updated>2020-06-30T09:50:19.087Z</updated>
+    <title>Hexo 删除博客文章</title>
+    <link href="https://github.com/DearDeer7/DearDeer7.github.io/2020/06/30/hexo-shan-chu-wen-zhang/"/>
+    <id>https://github.com/DearDeer7/DearDeer7.github.io/2020/06/30/hexo-shan-chu-wen-zhang/</id>
+    <published>2020-06-30T10:13:34.776Z</published>
+    <updated>2020-07-01T14:45:19.254Z</updated>
     
     <summary type="html">
     
@@ -29,22 +29,58 @@
       
         
         
-          &lt;h1 id=&quot;MATLAB报错：未定义函数或变量&quot;&gt;&lt;a href=&quot;#MATLAB报错：未定义函数或变量&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;刚刚接触博客，先尝试了下用 &lt;code&gt;hexo&lt;/code&gt; + &lt;code&gt;github&lt;/code&gt;
         
       
     
     </summary>
     
     
+      <category term="博客" scheme="https://github.com/DearDeer7/DearDeer7.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo" scheme="https://github.com/DearDeer7/DearDeer7.github.io/tags/Hexo/"/>
+    
+      <category term="Git" scheme="https://github.com/DearDeer7/DearDeer7.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MATLAB报错：未定义函数或变量</title>
+    <link href="https://github.com/DearDeer7/DearDeer7.github.io/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/"/>
+    <id>https://github.com/DearDeer7/DearDeer7.github.io/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/</id>
+    <published>2020-06-30T07:00:00.000Z</published>
+    <updated>2020-07-01T14:48:29.392Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近准备数学建模比赛，学习MATLAB入门遇到了个问题：&lt;code&gt;未定义函数或变量 &#39;myGcd&#39;&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数学建模" scheme="https://github.com/DearDeer7/DearDeer7.github.io/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    
+    
+      <category term="MATLAB" scheme="https://github.com/DearDeer7/DearDeer7.github.io/tags/MATLAB/"/>
+    
+      <category term="函数报错" scheme="https://github.com/DearDeer7/DearDeer7.github.io/tags/%E5%87%BD%E6%95%B0%E6%8A%A5%E9%94%99/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/DearDeer7/DearDeer7.github.io/2020/04/13/hello-world/"/>
-    <id>https://github.com/DearDeer7/DearDeer7.github.io/2020/04/13/hello-world/</id>
-    <published>2020-04-13T15:55:59.917Z</published>
-    <updated>2020-04-13T15:55:59.918Z</updated>
+    <link href="https://github.com/DearDeer7/DearDeer7.github.io/2020/04/14/hello-world/"/>
+    <id>https://github.com/DearDeer7/DearDeer7.github.io/2020/04/14/hello-world/</id>
+    <published>2020-04-13T16:00:00.000Z</published>
+    <updated>2020-07-01T14:50:12.522Z</updated>
     
     <summary type="html">
     
@@ -59,6 +95,10 @@
     </summary>
     
     
+      <category term="Hello World" scheme="https://github.com/DearDeer7/DearDeer7.github.io/categories/Hello-World/"/>
+    
+    
+      <category term="Hello World" scheme="https://github.com/DearDeer7/DearDeer7.github.io/tags/Hello-World/"/>
     
   </entry>
   
