@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo 删除博客文章</title>
-    <link href="https://deardeer.tech/2020/06/30/hexo-shan-chu-wen-zhang/"/>
-    <id>https://deardeer.tech/2020/06/30/hexo-shan-chu-wen-zhang/</id>
+    <link href="https://deardeer.tech/hexo-shan-chu-wen-zhang/"/>
+    <id>https://deardeer.tech/hexo-shan-chu-wen-zhang/</id>
     <published>2020-06-30T10:13:34.776Z</published>
     <updated>2020-07-01T14:45:19.254Z</updated>
     
@@ -47,8 +47,8 @@
   
   <entry>
     <title>MATLAB报错：未定义函数或变量</title>
-    <link href="https://deardeer.tech/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/"/>
-    <id>https://deardeer.tech/2020/06/30/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/</id>
+    <link href="https://deardeer.tech/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/"/>
+    <id>https://deardeer.tech/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/</id>
     <published>2020-06-30T07:00:00.000Z</published>
     <updated>2020-07-01T14:48:29.392Z</updated>
     
@@ -77,8 +77,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://deardeer.tech/2020/04/14/hello-world/"/>
-    <id>https://deardeer.tech/2020/04/14/hello-world/</id>
+    <link href="https://deardeer.tech/hello-world/"/>
+    <id>https://deardeer.tech/hello-world/</id>
     <published>2020-04-13T16:00:00.000Z</published>
     <updated>2020-07-01T14:50:12.522Z</updated>
     
