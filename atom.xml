@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deardeer.tech/"/>
-  <updated>2020-07-01T14:45:19.254Z</updated>
+  <updated>2020-07-13T04:39:55.687Z</updated>
   <id>https://deardeer.tech/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Feem：全平台支持的文件互传工具</title>
+    <link href="https://deardeer.tech/feem-quan-ping-tai-zhi-chi-de-wen-jian-hu-chuan-gong-ju/"/>
+    <id>https://deardeer.tech/feem-quan-ping-tai-zhi-chi-de-wen-jian-hu-chuan-gong-ju/</id>
+    <published>2020-07-13T03:00:00.000Z</published>
+    <updated>2020-07-13T04:39:55.687Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;偶尔想手机、PC互传个文件，小文件啥的的用QQ到还是挺方便的，但我毕竟是个重度追剧患者，遇到一堆大点的视频传起来体验就不那么好了。比如把一部电影传到手机，首先就是在PC上先用QQ把文件先上传到QQ那边，手机那边再来下载，这一来一回折腾就很费时费力。今天给大家介绍的是一款号称
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://deardeer.tech/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="文件互传" scheme="https://deardeer.tech/tags/%E6%96%87%E4%BB%B6%E4%BA%92%E4%BC%A0/"/>
+    
+      <category term="offline" scheme="https://deardeer.tech/tags/offline/"/>
+    
+      <category term="免费" scheme="https://deardeer.tech/tags/%E5%85%8D%E8%B4%B9/"/>
+    
+      <category term="LAN" scheme="https://deardeer.tech/tags/LAN/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo 删除博客文章</title>
