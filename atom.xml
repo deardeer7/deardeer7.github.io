@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deardeer.tech/"/>
-  <updated>2020-07-17T08:38:08.132Z</updated>
+  <updated>2020-07-17T09:15:47.015Z</updated>
   <id>https://deardeer.tech/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git设置和取消代理</title>
+    <link href="https://deardeer.tech/git-she-zhi-he-qu-xiao-dai-li/"/>
+    <id>https://deardeer.tech/git-she-zhi-he-qu-xiao-dai-li/</id>
+    <published>2020-07-17T09:00:00.000Z</published>
+    <updated>2020-07-17T09:15:47.015Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1、git设置代理&quot;&gt;&lt;a href=&quot;#1、git设置代理&quot; class=&quot;headerlink&quot; title=&quot;1、git设置代理&quot;&gt;&lt;/a&gt;1、git设置代理&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-git&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://deardeer.tech/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="git" scheme="https://deardeer.tech/tags/git/"/>
+    
+      <category term="proxy" scheme="https://deardeer.tech/tags/proxy/"/>
+    
+      <category term="代理" scheme="https://deardeer.tech/tags/%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode509.Fibonacci Number</title>

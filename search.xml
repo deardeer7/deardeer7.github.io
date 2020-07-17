@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>git设置和取消代理</title>
+      <link href="/git-she-zhi-he-qu-xiao-dai-li/"/>
+      <url>/git-she-zhi-he-qu-xiao-dai-li/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、git设置代理"><a href="#1、git设置代理" class="headerlink" title="1、git设置代理"></a>1、git设置代理</h2><pre class="line-numbers language-git"><code class="language-git">git config --global https.proxy http://127.0.0.1:1088<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-git"><code class="language-git">git config --global https.proxy https://127.0.0.1:1088<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-git"><code class="language-git">git config --global https.proxy socks5://127.0.0.1:1088<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-git"><code class="language-git"><span class="token comment" spellcheck="true">#只对github.com</span>git config --global http.https://github.com.proxy socks5://127.0.0.1:1088<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>端口号替换成你自己的就行了。</p><h2 id="2、git取消代理"><a href="#2、git取消代理" class="headerlink" title="2、git取消代理"></a>2、git取消代理</h2><pre class="line-numbers language-git"><code class="language-git">git config --global --unset http.proxy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-git"><code class="language-git">git config --global --unset https.proxy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-git"><code class="language-git"><span class="token comment" spellcheck="true">#取消代理github.com</span>git config --global --unset http.https://github.com.proxy)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>参考：<strong><a href="https://gist.github.com/laispace/666dd7b27e9116faece6" target="_blank" rel="noopener">git 设置和取消代理</a></strong></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> proxy </tag>
+            
+            <tag> 代理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode509.Fibonacci Number</title>
       <link href="/leetcode509.fibonacci-number/"/>
       <url>/leetcode509.fibonacci-number/</url>
