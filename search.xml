@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>windows更新npm和nodejs</title>
+      <link href="/windows-geng-xin-npm-he-nodejs/"/>
+      <url>/windows-geng-xin-npm-he-nodejs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="查看当前npm和nodejs版本"><a href="#查看当前npm和nodejs版本" class="headerlink" title="查看当前npm和nodejs版本"></a>查看当前npm和nodejs版本</h2><pre class="line-numbers language-npm"><code class="language-npm">npm -vnode -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200718221823.png" alt="查看npm和node版本"></p><p>我更新前的版本，这里放出来做参考。</p><h2 id="升级npm版本"><a href="#升级npm版本" class="headerlink" title="升级npm版本"></a>升级npm版本</h2><pre class="line-numbers language-npm"><code class="language-npm">npm install -g npm  或者 npm install npm -g    #升级到最新版本npm install npm@latest -g    #升级到最新版本npm install npm@4.1.2 -g    #升级到指定版本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200718220332.png" alt="npm升级到最新版本"></p><p>可以看到我升级前是v5.6.0，在执行升级到最新版本命令<code>npm install npm@latest -g</code>后变为v6.14.6。</p><h2 id="升级nodejs版本"><a href="#升级nodejs版本" class="headerlink" title="升级nodejs版本"></a>升级nodejs版本</h2><p>在<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node官网</a>下载新版本node的 msi 安装包，然后覆盖安装之前的版本来完成更新操作。</p><p>注意安装路径要和之前的位置一致，如果不知道之前安装在哪个位置可以用命令<code>where node</code></p><pre class="line-numbers language-npm"><code class="language-npm">where node #查看nodejs安装位置<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200718221458.png" alt="查看node安装位置"></p><p>node官网下载安装完新版本nodejs后，使用命令<code>node -v</code>查看当前node版本</p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200718221725.png" alt="查看当前node版本"></p><p>到这里npm和node就都更新升级完毕了。</p><p><strong>⚠踩坑警告</strong></p><p>我猜测在这步之前大家应该都没有问题（反正我是）。我按照网上广为流传的升级node方法：</p><p>使用<code>npm install -g n --force</code>的方法，安装 n 模块，node版本管理工具。<br>安装n模块：<code>npm install -g n</code>，执行后会报错</p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200718222326.png" alt="安装n模块"></p><p>尝试使用强制安装命令：<code>npm install -g n --force</code>，好像成功了？？？</p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200718223149.png" alt="强制安装n模块"></p><p>以为马上就要大功告成了，but！</p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200718223151.png" alt="image-20200718222620095"></p><p>这是什么原因呢，明明安装上了还没法用！</p><p>网上查到<a href="https://www.npmjs.com/package/n" target="_blank" rel="noopener">n模块官方</a>提示：</p><p> <code>Note: n is not supported natively on Windows.</code> Windows自然情况下是不支持n模块的。</p><p> 所以出现了上面虽然强制安装了，但是并不支持使用的情况。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> npm </tag>
+            
+            <tag> nodejs </tag>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git设置和取消代理</title>
       <link href="/git-she-zhi-he-qu-xiao-dai-li/"/>
       <url>/git-she-zhi-he-qu-xiao-dai-li/</url>
