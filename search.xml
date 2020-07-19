@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>LeetCode322. Coin Change</title>
+      <link href="/leetcode322-coin-change/"/>
+      <url>/leetcode322-coin-change/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://leetcode-cn.com/problems/coin-change/" target="_blank" rel="noopener">LeetCode322. Coin Change</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 动态规划 </tag>
+            
+            <tag> 中等 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>windows更新npm和nodejs</title>
       <link href="/windows-geng-xin-npm-he-nodejs/"/>
       <url>/windows-geng-xin-npm-he-nodejs/</url>
