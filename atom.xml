@@ -165,15 +165,15 @@
       <category term="算法" scheme="https://deardeer.tech/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="DP" scheme="https://deardeer.tech/tags/DP/"/>
-    
       <category term="leetcode" scheme="https://deardeer.tech/tags/leetcode/"/>
+    
+      <category term="动态规划" scheme="https://deardeer.tech/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="DP" scheme="https://deardeer.tech/tags/DP/"/>
     
       <category term="力扣" scheme="https://deardeer.tech/tags/%E5%8A%9B%E6%89%A3/"/>
     
       <category term="简单" scheme="https://deardeer.tech/tags/%E7%AE%80%E5%8D%95/"/>
-    
-      <category term="动态规划" scheme="https://deardeer.tech/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
