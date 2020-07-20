@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode509.Fibonacci Number, DearDeer 小鹿 算法 计算机 大学生 deardeer">
+    <meta name="keywords" content="LeetCode300. Longest Increasing Subsequence , DearDeer 小鹿 算法 计算机 大学生 deardeer">
     <meta name="description" content="站在巨人的肩膀">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode509.Fibonacci Number | 小鹿博客</title>
+    <title>LeetCode300. Longest Increasing Subsequence  | 小鹿博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/deerfavicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode509.Fibonacci Number</h1>
+                    <h1 class="description center-align post-title">LeetCode300. Longest Increasing Subsequence </h1>
                 </div>
             </div>
         </div>
@@ -432,24 +432,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/DP/">
-                                <span class="chip bg-color">DP</span>
-                            </a>
-                        
                             <a href="/tags/leetcode/">
                                 <span class="chip bg-color">leetcode</span>
                             </a>
                         
-                            <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                                <span class="chip bg-color">力扣</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                <span class="chip bg-color">简单</span>
-                            </a>
-                        
                             <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
                                 <span class="chip bg-color">动态规划</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                <span class="chip bg-color">中等</span>
                             </a>
                         
                     </div>
@@ -473,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-17
+                    2020-07-20
                 </div>
                 
 
@@ -482,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
@@ -504,70 +496,87 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a href="https://leetcode-cn.com/problems/fibonacci-number/" target="_blank" rel="noopener">LeetCode509.Fibonacci Number</a>  </p>
-<h2 id="1、暴力递归"><a href="#1、暴力递归" class="headerlink" title="1、暴力递归"></a>1、暴力递归</h2><p>斐波那契数列的性质：</p>
-<p><code>f1 = f2 = 1</code> </p>
-<p><code>fn = fn-1 - fn-2</code></p>
-<p>从这个性质我们可以写出<strong>状态转移方程</strong>为：</p>
-<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200717163705.png" alt=""></p>
-<p>很容易我们写出代码：</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token keyword">int</span> N<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">||</span> N<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token function">fib</span><span class="token punctuation">(</span>N<span class="token number">-1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span>N<span class="token number">-2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这种写法很好想出，但算法时间复杂度非常高，指数级别，为<strong>O(2^N)</strong>。</p>
-<p>原因是在递归的求解过程中有很多子问题被重复计算，这造成巨大的时间花费，使得算法变得十分低效。</p>
-<h2 id="2、带备忘录的记忆化递归"><a href="#2、带备忘录的记忆化递归" class="headerlink" title="2、带备忘录的记忆化递归"></a>2、带备忘录的记忆化递归</h2><p>上一个解法提到提高解题效率的关键是如何消除子问题被重复计算。知道了这点，我们可以采用记<strong>备忘录</strong>的形式，每次求解子问题时，先不要着急计算，在备忘录中查询有无此子问题的答案，有的话直接返回结果；没有的话再递归求解子问题，同时将求解出的子问题答案记录在备忘录中。</p>
-<p>这里使用一个vector数组当<strong>备忘录</strong>。</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">calc</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> memo<span class="token punctuation">,</span> <span class="token keyword">int</span> N<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//如果memo[N]未计算过则计算，否则直接返回</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>memo<span class="token punctuation">[</span>N<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
-        memo<span class="token punctuation">[</span>N<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">calc</span><span class="token punctuation">(</span>memo<span class="token punctuation">,</span>N<span class="token number">-1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">calc</span><span class="token punctuation">(</span>memo<span class="token punctuation">,</span>N<span class="token number">-2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> memo<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+                <h2 id="题目：300-最长上升子序列"><a href="#题目：300-最长上升子序列" class="headerlink" title="题目：300. 最长上升子序列"></a>题目：<a href="https://leetcode-cn.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener">300. 最长上升子序列</a></h2><p>给定一个无序的整数数组，找到其中最长上升子序列的长度。</p>
+<p>示例:</p>
+<p>输入: <code>[10,9,2,5,3,7,101,18]</code><br>输出: <code>4</code><br>解释: 最长的上升子序列是 <code>[2,3,7,101]</code>，它的长度是 <code>4</code>。</p>
+<h2 id="动态规划解法"><a href="#动态规划解法" class="headerlink" title="动态规划解法"></a>动态规划解法</h2><p>值得注意的是，要区分子序列和子串的概念，子串要求连续，而子序列没有这个要求。</p>
+<p>我们定义dp数组为<code>dp[i]</code>，它表示的含义是以第<code>i</code>个数即<code>nums[i]</code>结尾的最长上升子序列的长度。</p>
+<p>对于每一个子序列，显然它的最小长度为<code>1</code>即包含自身一个元素，所以我们的<strong>基础状态</strong><code>dp[i] = 1</code>。</p>
+<p>接下来考虑状态转移方程：</p>
+<p>假设我们求出了<code>dp[i-1]</code>，我们该如何求<code>dp[i]</code>呢？</p>
+<p>既然要求是一个上升的子序列，那么必然需要从<code>nums[0]</code>到<code>nums[i-1]</code>找比<code>nums[i]</code>小的数作为子序列的前一项，从而构造出一个较长的子序列;想要达到最长子序列的目的，我们需要考虑所有可能的子序列，然后选出长度最大的即可。</p>
+<p>我们可以写出：</p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200720162000.png" alt="状态转移方程"></p>
+<p>求出以每个元素为结尾的最大上升子序列后，再遍历求出求大的子序列长度即为整个无序数组的最长上升子序列的长度。</p>
+<p>代码为：</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">lengthOfLIS</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//dp数组全部初始化为1</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">dp</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">int</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token keyword">int</span> N<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">||</span> N<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//memo 数组做备忘录</span>
-    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">memo</span><span class="token punctuation">(</span>N<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//base case</span>
-    memo<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> memo<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token function">calc</span><span class="token punctuation">(</span>memo<span class="token punctuation">,</span>N<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>有了memo备忘录存储每个子问题的计算结果，每次遇到相同子问题计算时直接查表即可。这样一来算法的时间复杂度大大降低了，为<strong>O(N)</strong>，算法的空间复杂度为<strong>O(N)</strong>。这在理论上已经达到了和动态规划的迭代解法一样的效率。</p>
-<h2 id="3、自底向上的迭代法"><a href="#3、自底向上的迭代法" class="headerlink" title="3、自底向上的迭代法"></a>3、自底向上的迭代法</h2><p>可以发现刚才的两种解法都是考虑<strong>自上而下的递归式解法</strong>，即我们从结果的最终态出发，向问题的基础状态靠近，从而求解出答案。实际上我们还可以从基础状态出发，通过迭代向上求解，这样的方法叫<strong>自底向上的迭代法</strong>。</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token keyword">int</span> N<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">||</span> N<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//memo 数组做备忘录</span>
-    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">memo</span><span class="token punctuation">(</span>N<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    memo<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> memo<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> N<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        memo<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> memo<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">+</span> memo<span class="token punctuation">[</span>i<span class="token number">-2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> dp<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//求出最大的序列长度</span>
+        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> d<span class="token operator">:</span>dp<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            res <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> memo<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>理论上，这种自底向上的迭代解法和自上而下的递归解法在时间复杂度方便是一样的，都是<strong>O(N)</strong>，但实际运行中，递归解法涉及较多的函数调用等耗费时间的操作，同样的问题规模可能要消耗稍微多一点时间。</p>
-<p>一般来说，递归式的解法思路清晰，容易理解，迭代式的解法要求细节缜密，使用起来稍微复杂点，两者各有千秋。</p>
-<h2 id="4、优化"><a href="#4、优化" class="headerlink" title="4、优化"></a>4、优化</h2><p>实际上，由斐波那契数的状态转移方程，我们可以发现每次求解的<strong>当前状态只与前两个状态有关系</strong>，即我们并不需要一整个备忘录表来存子问题的结果，只需要记住当前问题的前两个子问题结果。我们可以定义两个变量，每次利用这两个变量求出当前子问题的答案，再更新这两个变量，通过迭代获得问题的最终答案。</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token keyword">int</span> N<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">||</span> N<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//f1,f2存储前两个状态，res记录结果</span>
-    <span class="token keyword">int</span> f1 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> f2 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> N<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//根据前两个状态，计算当前状态值</span>
-        res <span class="token operator">=</span> f1 <span class="token operator">+</span> f2<span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//更新前两个状态</span>
-        f1 <span class="token operator">=</span> f2<span class="token punctuation">;</span>
-        f2 <span class="token operator">=</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样的解法算法时间复杂度为<strong>O(n^2^)</strong>，做到这里已经可以了，但实际上时间复杂度还可降到<strong>O(nlogn)</strong>，也就是下面扩展介绍的二分解法。</p>
+<h2 id="二分查找解法"><a href="#二分查找解法" class="headerlink" title="二分查找解法"></a>二分查找解法</h2><p>明眼看，总感觉二分解法和这道题扯不上关系，其实有一种纸牌游戏叫做patience game，它的玩法与最长上升子序列有关系，以这种游戏为名还衍生出了一种排序算法：patience sorting。</p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200720164400.png" alt="patience sorting"></p>
+<p>这个纸牌游戏也叫纸牌接龙，相信大家都玩过。</p>
+<p>大佬的介绍：</p>
+<p>首先，给你一排扑克牌，我们像遍历数组那样从左到右一张一张处理这些扑克牌，最终要把这些牌分成若干堆。</p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200720165821.webp" alt="poker1"></p>
+<p><strong>处理这些扑克牌要遵循以下规则</strong>：</p>
+<p>只能把点数小的牌压到点数比它大的牌上；如果当前牌点数较大没有可以放置的堆，则新建一个堆，把这张牌放进去；如果当前牌有多个堆可供选择，则选择最左边的那一堆放置。</p>
+<p>比如说上述的扑克牌最终会被分成这样 5 堆（我们认为纸牌 A 的牌面是最大的，纸牌 2 的牌面是最小的）。</p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200720165827.webp" alt="poker2"></p>
+<p>为什么遇到多个可选择堆的时候要放到最左边的堆上呢？稍加观察可以发现，<strong>这样可以保证牌堆顶的牌有序</strong>（2, 4, 7, 8, Q）。</p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200720165832.webp" alt="poker3"></p>
+<p>按照上述规则执行，可以算出最长递增子序列，牌的堆数就是最长递增子序列的长度，<strong>因为如果从每堆拿出一张牌，就可以形成一个递增子序列。又因为每堆牌的值是递减的，所以这个递增子序列是最长的。</strong></p>
+<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200720165903.webp" alt="LIS"></p>
+<p>我们只要把处理扑克牌的过程编程写出来即可。每次处理一张扑克牌不是要找一个合适的牌堆顶来放吗，牌堆顶的牌不是<strong>有序</strong>吗，这就能用到二分查找了：用二分查找来搜索当前牌应放置的位置，从而使算法时间复杂度降到<code>O(nlogn)</code>。</p>
+<p>代码：</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">lengthOfLIS</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//cards记录每堆牌的最下面的牌</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">cards</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//牌堆数初始为0</span>
+        <span class="token keyword">int</span> piles <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//开始摆牌</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//要处理的牌</span>
+            <span class="token keyword">int</span> poker <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r <span class="token operator">=</span> piles<span class="token punctuation">;</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span> <span class="token punctuation">(</span>r <span class="token operator">-</span> l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>cards<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> poker<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>cards<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">>=</span> poker<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    r <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">//如果没找到合适牌堆，新建牌堆</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>l <span class="token operator">==</span> piles<span class="token punctuation">)</span> piles<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//更新cards</span>
+            cards<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">=</span> poker<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//牌堆数即为最长公共子序列长度</span>
+        <span class="token keyword">return</span> piles<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>我们通过只记录必要的数据来缩小DP table（即备忘录表）的大小，这个技巧被称为<strong>状态压缩</strong>。</p>
-<p>通过优化，我们最终的时间复杂度为<strong>O(N)</strong>，空间复杂度为<strong>O(1)</strong>。</p>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -611,7 +620,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://deardeer.tech/leetcode509.fibonacci-number/">https://deardeer.tech/leetcode509.fibonacci-number/</a>
+                    <a href="https://deardeer.tech/leetcode300-longest-increasing-subsequence/">https://deardeer.tech/leetcode300-longest-increasing-subsequence/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -649,24 +658,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/DP/">
-                                    <span class="chip bg-color">DP</span>
-                                </a>
-                            
                                 <a href="/tags/leetcode/">
                                     <span class="chip bg-color">leetcode</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                                    <span class="chip bg-color">力扣</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                    <span class="chip bg-color">简单</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
                                     <span class="chip bg-color">动态规划</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                    <span class="chip bg-color">中等</span>
                                 </a>
                             
                         </div>
@@ -837,7 +838,7 @@
         repo: 'DearDeer7.github.io',
         owner: 'deardeer7',
         admin: "deardeer7",
-        id: '2020-07-17T14-00-00',
+        id: '2020-07-20T15-40-43',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -861,54 +862,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/git-she-zhi-he-qu-xiao-dai-li/">
+                <a href="/leetcode300-longest-increasing-subsequence/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="git设置和取消代理">
+                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="LeetCode300. Longest Increasing Subsequence ">
                         
-                        <span class="card-title">git设置和取消代理</span>
+                        <span class="card-title">LeetCode300. Longest Increasing Subsequence </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为git设置和取消proxy。
+                            最长上升子序列LIS，老题新解！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/proxy/">
-                        <span class="chip bg-color">proxy</span>
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
                     </a>
                     
-                    <a href="/tags/%E4%BB%A3%E7%90%86/">
-                        <span class="chip bg-color">代理</span>
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
                 </div>
@@ -922,31 +925,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/feem-quan-ping-tai-zhi-chi-de-wen-jian-hu-chuan-gong-ju/">
+                <a href="/leetcode322-coin-change/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="Feem：全平台支持的文件互传工具">
+                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="LeetCode322. Coin Change">
                         
-                        <span class="card-title">Feem：全平台支持的文件互传工具</span>
+                        <span class="card-title">LeetCode322. Coin Change</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            全平台支持的文件互传工具，解放数据线！
+                            凑零钱，经典动态规划
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -956,20 +959,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%96%87%E4%BB%B6%E4%BA%92%E4%BC%A0/">
-                        <span class="chip bg-color">文件互传</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/offline/">
-                        <span class="chip bg-color">offline</span>
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
                     </a>
                     
-                    <a href="/tags/%E5%85%8D%E8%B4%B9/">
-                        <span class="chip bg-color">免费</span>
-                    </a>
-                    
-                    <a href="/tags/LAN/">
-                        <span class="chip bg-color">LAN</span>
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
                 </div>
