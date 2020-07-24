@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>C++中的正无穷和负无穷</title>
+      <link href="/c-zhong-de-zheng-wu-qiong-he-fu-wu-qiong/"/>
+      <url>/c-zhong-de-zheng-wu-qiong-he-fu-wu-qiong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>如果是<strong>int</strong>，可以用<code>INT_MAX</code>表示正无穷，<code>INT_MIN</code>表示负无穷，需要包含<code>limits.h</code>。</p><p>如果是<strong>double</strong>，可以用<code>DBL_MAX</code>表示正无穷，<code>-DBL_MAX</code>表示负无穷(注意不是DBL_MIN)，需要包含<code>float.h</code></p><p>这里用Dev C++查出：</p><ul><li>INT_MAX = 2147483647 </li><li>INT_MIN = -2147483648 </li><li>DBL_MAX = 1.79769e+308 </li><li>-DBL_MAX = -1.79769e+308</li></ul><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200724221631.png" alt="测试图"></p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>好奇的扒了下Dev C++的limits.h和floa.h，发现里面还定义了不少其他的量：</p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200724222051.png" alt="limits.h"></p><p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200724222501.png" alt="flaot.h"></p><p>看来头文件里还是有很多秘密啊！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 库函数 </tag>
+            
+            <tag> 无穷大 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode300. Longest Increasing Subsequence </title>
       <link href="/leetcode300-longest-increasing-subsequence/"/>
       <url>/leetcode300-longest-increasing-subsequence/</url>
