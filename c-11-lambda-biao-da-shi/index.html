@@ -590,7 +590,7 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上面这个例子先声明了一个整型变量a，然后再创建Lambda表达式，该表达式“捕获”了a变量，这样在Lambda表达式函数体中就可以获得该变量的值。</p>
 <p>类似参数传递方式（值传递、引入传递、指针传递），在Lambda表达式中，外部变量的捕获方式也有值捕获、引用捕获、隐式捕获。</p>
-<h4 id="1、值捕获"><a href="#1、值捕获" class="headerlink" title="1、值捕获"></a><strong>1、值捕获</strong></h4><p>值捕获和参数传递中的值传递类似，被捕获的变量的值在Lambda表达式创建时通过值拷贝的方式传入，因此随后对该变量的修改不会影响影响Lambda表达式中的值。</p>
+<h3 id="1、值捕获"><a href="#1、值捕获" class="headerlink" title="1、值捕获"></a><strong>1、值捕获</strong></h3><p>值捕获和参数传递中的值传递类似，被捕获的变量的值在Lambda表达式创建时通过值拷贝的方式传入，因此随后对该变量的修改不会影响影响Lambda表达式中的值。</p>
 <p>示例如下：</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
@@ -600,7 +600,7 @@
     <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出：123</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这里需要注意的是，如果以传值方式捕获外部变量，则在Lambda表达式函数体中不能修改该外部变量的值。</p>
-<h4 id="2、引用捕获"><a href="#2、引用捕获" class="headerlink" title="2、引用捕获"></a><strong>2、引用捕获</strong></h4><p>使用引用捕获一个外部变量，只需要在捕获列表变量前面加上一个引用说明符&amp;。如下：</p>
+<h3 id="2、引用捕获"><a href="#2、引用捕获" class="headerlink" title="2、引用捕获"></a><strong>2、引用捕获</strong></h3><p>使用引用捕获一个外部变量，只需要在捕获列表变量前面加上一个引用说明符&amp;。如下：</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
@@ -609,7 +609,7 @@
     <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出：321</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>从示例中可以看出，引用捕获的变量使用的实际上就是该引用所绑定的对象。</p>
-<h4 id="3、隐式捕获"><a href="#3、隐式捕获" class="headerlink" title="3、隐式捕获"></a><strong>3、隐式捕获</strong></h4><p>上面的值捕获和引用捕获都需要我们在捕获列表中显示列出Lambda表达式中使用的外部变量。除此之外，我们还可以让编译器根据函数体中的代码来推断需要捕获哪些变量，这种方式称之为隐式捕获。隐式捕获有两种方式，分别是[=]和[&amp;]。[=]表示以值捕获的方式捕获外部变量，[&amp;]表示以引用捕获的方式捕获外部变量。</p>
+<h3 id="3、隐式捕获"><a href="#3、隐式捕获" class="headerlink" title="3、隐式捕获"></a><strong>3、隐式捕获</strong></h3><p>上面的值捕获和引用捕获都需要我们在捕获列表中显示列出Lambda表达式中使用的外部变量。除此之外，我们还可以让编译器根据函数体中的代码来推断需要捕获哪些变量，这种方式称之为隐式捕获。隐式捕获有两种方式，分别是[=]和[&amp;]。[=]表示以值捕获的方式捕获外部变量，[&amp;]表示以引用捕获的方式捕获外部变量。</p>
 <p>隐式值捕获示例：</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
@@ -625,7 +625,7 @@
     a <span class="token operator">=</span> <span class="token number">321</span><span class="token punctuation">;</span>
     <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出：321</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="4、混合方式"><a href="#4、混合方式" class="headerlink" title="4、混合方式"></a><strong>4、混合方式</strong></h4><p>上面的例子，要么是值捕获，要么是引用捕获，Lambda表达式还支持混合的方式捕获外部变量，这种方式主要是以上几种捕获方式的组合使用。</p>
+<h3 id="4、混合方式"><a href="#4、混合方式" class="headerlink" title="4、混合方式"></a><strong>4、混合方式</strong></h3><p>上面的例子，要么是值捕获，要么是引用捕获，Lambda表达式还支持混合的方式捕获外部变量，这种方式主要是以上几种捕获方式的组合使用。</p>
 <p>到这里，我们来总结一下：C++11中的Lambda表达式捕获外部变量主要有以下形式：</p>
 <table>
 <thead>
