@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="0-1 Knapsack Problem, DearDeer 小鹿 算法 计算机 大学生 deardeer">
+    <meta name="keywords" content="字符串流 istringstream 和 ostringstream 的用法, DearDeer 小鹿 算法 计算机 大学生 deardeer">
     <meta name="description" content="站在巨人的肩膀">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>0-1 Knapsack Problem | 小鹿博客</title>
+    <title>字符串流 istringstream 和 ostringstream 的用法 | 小鹿博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/deerfavicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">0-1 Knapsack Problem</h1>
+                    <h1 class="description center-align post-title">字符串流 istringstream 和 ostringstream 的用法</h1>
                 </div>
             </div>
         </div>
@@ -432,16 +432,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                <span class="chip bg-color">动态规划</span>
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B5%81/">
+                                <span class="chip bg-color">字符串流</span>
                             </a>
                         
-                            <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                <span class="chip bg-color">简单</span>
-                            </a>
-                        
-                            <a href="/tags/geeksforgeeks/">
-                                <span class="chip bg-color">geeksforgeeks</span>
+                            <a href="/tags/stringstram/">
+                                <span class="chip bg-color">stringstram</span>
                             </a>
                         
                     </div>
@@ -452,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
+                            <a href="/categories/C/" class="post-category">
+                                C++
                             </a>
                         
                     </div>
@@ -465,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-25
+                    2020-10-22
                 </div>
                 
 
@@ -474,14 +470,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    785
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -496,60 +492,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem/0" target="_blank" rel="noopener"><strong>0 - 1 Knapsack Problem</strong></a></p>
-<h3 id="描述："><a href="#描述：" class="headerlink" title="描述："></a><strong>描述：</strong></h3><p>给你<strong>N个</strong>物品的重量和价值，将这些物品放入容量为<strong>W</strong>的背包中，以获取背包中的最大总价值。请注意，<strong>每个项目</strong>只有<strong>一个数量</strong>。<br>换句话说，给定两个整数数组<strong>val [0..N-1]</strong>和<strong>wt [0..N-1]</strong>，它们分别表示与<strong>N个</strong>物品的重量和价值。还要给定代表背包容量的整数<strong>W</strong>，找出<strong>val []</strong>的最大值子集，以使该子集的权重之和小于或等于<strong>W。</strong>你不能破坏某个物品（比如把物品拆分），<strong>只能选择它，或者不要选择它（0-1属性）</strong>。</p>
-<h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a><strong>输入：</strong></h3><p>的第一行包含一个整数<strong>T，</strong>表示测试用例的数量。然后是 <strong>T</strong>测试用例。每个测试用例包含四行。<br>第一行由<strong>N</strong>个项目组成。<br>第二行包含<strong>W</strong>，即背包的最大容量。<br>在第三行中， <strong>N个</strong>空格分隔的正整数表示<strong>N个</strong>物品的价值，<br>在第四行中，<strong>N个</strong>空格分隔的正整数表示相应物品的重量。</p>
-<h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a><strong>输出：</strong></h3><p>对于每个测试用例，在新一行中，输出在给定条件下可以获得的<strong>背包最大价值</strong>。</p>
-<h2 id="动态规划解法"><a href="#动态规划解法" class="headerlink" title="动态规划解法"></a>动态规划解法</h2><h3 id="明确问题的状态和选择"><a href="#明确问题的状态和选择" class="headerlink" title="明确问题的状态和选择."></a>明确问题的状态和选择.</h3><p>分析题目可以发现问题的状态有两个，背包容量和可选择的物品；对于每个物品，我们在选择时有两种方案：<strong>装进背包</strong>或者<strong>不装进背包</strong>，这也是为什么叫做0-1背包问题。</p>
-<h3 id="定义dp数组"><a href="#定义dp数组" class="headerlink" title="定义dp数组"></a>定义dp数组</h3><p>刚才分析出来问题的状态有两个，因此需要一个二维数组，一维表示可选的物品范围，另一维表示背包的容量。<strong><code>dp[i][j]</code>的定义如下：对于前<code>i</code>个物品，当前背包的容量为<code>j</code>，这种情况下可以装的最大价值是<code>dp[i][j]</code>。</strong></p>
-<p>这样我们最终想要的答案就是<code>dp[N][W]</code>。</p>
-<p>基础状态：<code>dp[..][j] = 0</code>， 因为可选的物品为空，即背包什么都没有装，价值为零；<code>dp[i][..] = 0</code>，因为背包的容量为零，什么也装不了。</p>
-<h3 id="状态转移方程"><a href="#状态转移方程" class="headerlink" title="状态转移方程"></a>状态转移方程</h3><p>回顾刚才的分析，状态的改变有两个选择：</p>
-<p>对与第i个商品，①不装入背包，那么背包的最大价值<code>dp[i][j]</code>显然是继承<code>dp[i-1][j]</code>，背包的容量和价值都不变。②装入背包，那么背包的最大价值应该是前i-1个物品的最大价值加上第i个商品的价值，换句话说，我们的前提是<strong>装第<code>i</code>个物品</strong>，也就是在剩余重量<code>w-wt[i-1]</code>限制下能装的最大价值，加上第<code>i</code>个物品的价值<code>val[i-1]</code>，即<code>dp[i][j] = dp[i-1][j-wt[i-1]]+val[i-1]</code>。 </p>
-<p>注意：物品的价值和重量数组下标从0开始，即wt[i-1]和al[i-1]分别对应第i个物品的重量和价值。</p>
-<p>综合一下我们的状态转移方程就是：</p>
-<p><img src="https://gitee.com/deardeer7/MyPic/raw/master/img/20200725130553.png" alt="状态转移方程"></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;vector></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cmath></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> t<span class="token punctuation">;</span>
-    cin<span class="token operator">>></span>t<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">,</span>w<span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        cin <span class="token operator">>></span> n <span class="token operator">>></span> w<span class="token punctuation">;</span>
-        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">val</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">wt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            cin <span class="token operator">>></span> val<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            cin <span class="token operator">>></span> wt<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">dp</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">(</span>w<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> w<span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">if</span><span class="token punctuation">(</span>j<span class="token operator">>=</span>wt<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span>wt<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">+</span> val<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dp<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-                <span class="token keyword">else</span> dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> dp<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        cout <span class="token operator">&lt;&lt;</span> dp<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>w<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>复杂度分析：</p>
+                <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><p>iostream 标准库支持内存中的输入／输出，只要将流与存储在程序内存中的 string 对象捆绑起来即可。此时，可使用 iostream 输入和输出操作符读写这个 string 对象。</p>
+<p>标准库定义了三种类型的字符串流：</p>
 <ul>
-<li><p>时间复杂度：O(N*W)</p>
-<p>N代表物品的数量，W代表背包的容量。</p>
+<li><p><code>istringstream</code>，由 istream 派生而来，提供<strong>读</strong> string 的功能。</p>
 </li>
-<li><p>空间复杂度：O(N*W)</p>
-<p>使用一个N*W的二位数组。</p>
+<li><p><code>ostringstream</code>，由 ostream 派生而来，提供<strong>写</strong> string 的功能。</p>
+</li>
+<li><p><code>stringstream</code>，由 iostream 派生而来，提供<strong>读写</strong> string 的功能。</p>
+<p>要使用上述类，必须包含 <code>sstream</code> 头文件。</p>
 </li>
 </ul>
+<p>与 fstream 类型一样，上述类型由 iostream 类型派生而来，这意味着 iostream 上所有的操作适用于 sstream 中的类型。sstream 类型除了继承的操作外，还各自定义了一个有 string 形参的构造函数，这个构造函数将 string 类型的实参复制给 stringstream 对象。对 stringstream 的读写操作实际上读写的就是该对象中的 string 对象。这些类还定义了名为 str 的成员，用来读取或设置 stringstream 对象所操纵的 string 值。</p>
+<p>注意到尽管 fstream 和 sstream 共享相同的基类，但它们没有其他相互关系。特别是，stringstream 对象不使用open 和 close 函数，而 fstream 对象则不允许使用 str。</p>
+<h2 id="2-stringstram常用操作"><a href="#2-stringstram常用操作" class="headerlink" title="2.stringstram常用操作"></a>2.stringstram常用操作</h2><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">// 创建stringstream对象</span>
+stringstream stream<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 创建以s为副本的stringstream对象</span>
+string s <span class="token operator">=</span> <span class="token string">"deardeer.tech"</span><span class="token punctuation">;</span>
+stringstream <span class="token function">stream</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 返回一个string对象，值为当前stringstream对象的内容</span>
+stream<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 拷贝s的内容到stream中</span>
+stream<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="3-istringstream"><a href="#3-istringstream" class="headerlink" title="3.istringstream"></a>3.istringstream</h2><pre class="line-numbers language-cpp"><code class="language-cpp">istringstream <span class="token function">istrm</span><span class="token punctuation">(</span><span class="token string">"1 2 3 4 5 6 7 8 9 10"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+string word<span class="token punctuation">;</span>
+
+<span class="token keyword">while</span><span class="token punctuation">(</span>istrm <span class="token operator">>></span> word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> word <span class="token operator">&lt;&lt;</span> <span class="token string">'|'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 运行结果：1|2|3|4|5|6|7|8|9|10|</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2-ostringstream"><a href="#2-ostringstream" class="headerlink" title="2.ostringstream"></a>2.ostringstream</h2><pre class="line-numbers language-cpp"><code class="language-cpp">ostringstream ostrm<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 将10,9,8,7,..,1写入ostringstream</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ostrm <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 输出ostringstream的内容</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">char</span> c <span class="token operator">:</span> ostrm<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 运行结果：10 9 8 7 6 5 4 3 2 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="4-简单应用"><a href="#4-简单应用" class="headerlink" title="4.简单应用"></a>4.简单应用</h4><h3 id="a-特殊读入"><a href="#a-特殊读入" class="headerlink" title="a.特殊读入"></a>a.特殊读入</h3><p>一般我们可以每次一个单词或每次一行的方式处理输入的程序。第一种程序用 string 输入操作符，而第二种则使用 getline 函数。然而，有些程序需要同时使用这两种方式：有些处理基于每行实现，而其他处理则要操纵每行中每个单词。这时候我们可用 stringstream 对象实现：</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp">string sentence<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 以行为单位操作</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">getline</span><span class="token punctuation">(</span>cin<span class="token punctuation">,</span> sentence<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    istringstream <span class="token function">istrm</span><span class="token punctuation">(</span>sentence<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    string word<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>istrm <span class="token operator">>></span> word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 以单词为单位操作</span>
+        cout <span class="token operator">&lt;&lt;</span> word <span class="token operator">&lt;&lt;</span> <span class="token string">"#"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 输入：Hello everyone! This is an ostringstream example!</span>
+<span class="token comment" spellcheck="true">// 输出：Hello#everyone!#This#is#an#ostringstream#example!#</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="b-格式化读写、转换"><a href="#b-格式化读写、转换" class="headerlink" title="b.格式化读写、转换"></a>b.格式化读写、转换</h3><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> b <span class="token operator">=</span> <span class="token number">77.77</span><span class="token punctuation">;</span>
+ostringstream ostrm<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 写入ostringstream</span>
+ostrm <span class="token operator">&lt;&lt;</span> <span class="token string">"integer: "</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> <span class="token string">" float: "</span> <span class="token operator">&lt;&lt;</span> b<span class="token punctuation">;</span>
+cout <span class="token operator">&lt;&lt;</span> ostrm<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 此时ostrm内容为：integer: 7 float: 77.77</span>
+
+<span class="token keyword">int</span> c<span class="token punctuation">;</span>
+<span class="token keyword">double</span> d<span class="token punctuation">;</span>
+istringstream <span class="token function">istrm</span><span class="token punctuation">(</span>ostrm<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+string ts<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 从istringstream读出</span>
+istrm <span class="token operator">>></span> ts <span class="token operator">>></span> c <span class="token operator">>></span> ts <span class="token operator">>></span> d<span class="token punctuation">;</span>
+cout <span class="token operator">&lt;&lt;</span> c <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span> <span class="token operator">&lt;&lt;</span> d <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 运行结果：</span>
+<span class="token comment" spellcheck="true">// integer: 7 float: 77.77</span>
+<span class="token comment" spellcheck="true">// 7 77.77</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -593,7 +617,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://deardeer.tech/0-1-knapsack-problem/">https://deardeer.tech/0-1-knapsack-problem/</a>
+                    <a href="https://deardeer.tech/zi-fu-chuan-liu-istringstream-he-ostringstream-de-yong-fa/">https://deardeer.tech/zi-fu-chuan-liu-istringstream-he-ostringstream-de-yong-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -631,16 +655,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                    <span class="chip bg-color">动态规划</span>
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B5%81/">
+                                    <span class="chip bg-color">字符串流</span>
                                 </a>
                             
-                                <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                    <span class="chip bg-color">简单</span>
-                                </a>
-                            
-                                <a href="/tags/geeksforgeeks/">
-                                    <span class="chip bg-color">geeksforgeeks</span>
+                                <a href="/tags/stringstram/">
+                                    <span class="chip bg-color">stringstram</span>
                                 </a>
                             
                         </div>
@@ -811,7 +831,7 @@
         repo: 'DearDeer7.github.io',
         owner: 'deardeer7',
         admin: "deardeer7",
-        id: '2020-07-25T11-22-46',
+        id: '2020-10-22T17-31-50',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -835,54 +855,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/er-fen-cha-zhao-mo-ban/">
+                <a href="/zi-fu-chuan-liu-istringstream-he-ostringstream-de-yong-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="二分查找模板总结">
+                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="字符串流 istringstream 和 ostringstream 的用法">
                         
-                        <span class="card-title">二分查找模板总结</span>
+                        <span class="card-title">字符串流 istringstream 和 ostringstream 的用法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            二分查找，一网打尽!
+                            简单学习C++字符串流stringstream的使用。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B5%81/">
+                        <span class="chip bg-color">字符串流</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">二分查找</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A8%A1%E6%9D%BF/">
-                        <span class="chip bg-color">模板</span>
+                    <a href="/tags/stringstram/">
+                        <span class="chip bg-color">stringstram</span>
                     </a>
                     
                 </div>
@@ -896,24 +914,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/c-zhong-de-zheng-wu-qiong-he-fu-wu-qiong/">
+                <a href="/c-lower-bound-he-upper-bound-yong-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/6.jpg" class="responsive-img" alt="C++中的正无穷和负无穷">
+                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="C++ lower_bound() 和 upper_bound() 用法">
                         
-                        <span class="card-title">C++中的正无穷和负无穷</span>
+                        <span class="card-title">C++ lower_bound() 和 upper_bound() 用法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            学会使用一些内置的常量
+                            C++中的二分模板
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-20
                             </span>
                         <span class="publish-author">
                             
@@ -930,12 +948,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A0%E7%A9%B7%E5%A4%A7/">
-                        <span class="chip bg-color">无穷大</span>
+                    <a href="/tags/%E5%BA%93%E5%87%BD%E6%95%B0/">
+                        <span class="chip bg-color">库函数</span>
                     </a>
                     
-                    <a href="/tags/%E5%A4%B4%E6%96%87%E4%BB%B6/">
-                        <span class="chip bg-color">头文件</span>
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                        <span class="chip bg-color">二分查找</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A8%A1%E6%9D%BF/">
+                        <span class="chip bg-color">模板</span>
                     </a>
                     
                 </div>

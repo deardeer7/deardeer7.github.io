@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deardeer.tech/"/>
-  <updated>2020-09-20T09:21:45.023Z</updated>
+  <updated>2020-10-22T11:20:46.523Z</updated>
   <id>https://deardeer.tech/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>字符串流 istringstream 和 ostringstream 的用法</title>
+    <link href="https://deardeer.tech/zi-fu-chuan-liu-istringstream-he-ostringstream-de-yong-fa/"/>
+    <id>https://deardeer.tech/zi-fu-chuan-liu-istringstream-he-ostringstream-de-yong-fa/</id>
+    <published>2020-10-22T09:31:50.000Z</published>
+    <updated>2020-10-22T11:20:46.523Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.概述&quot;&gt;&lt;/a&gt;1.概述&lt;/h2&gt;&lt;p&gt;iostream 标准库支持内存中的输入／输出，只要将流与存储在程序内存中的 string 对象捆绑起来即可。此时，可使用
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://deardeer.tech/categories/C/"/>
+    
+    
+      <category term="字符串流" scheme="https://deardeer.tech/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B5%81/"/>
+    
+      <category term="stringstram" scheme="https://deardeer.tech/tags/stringstram/"/>
+    
+  </entry>
   
   <entry>
     <title>C++ lower_bound() 和 upper_bound() 用法</title>
