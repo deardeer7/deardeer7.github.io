@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deardeer.tech/"/>
-  <updated>2021-01-05T07:20:25.751Z</updated>
+  <updated>2021-01-06T07:04:22.664Z</updated>
   <id>https://deardeer.tech/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>学习使用Git（二）</title>
+    <link href="https://deardeer.tech/xue-xi-shi-yong-git-er/"/>
+    <id>https://deardeer.tech/xue-xi-shi-yong-git-er/</id>
+    <published>2021-01-05T08:11:44.000Z</published>
+    <updated>2021-01-06T07:04:22.664Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;远程仓库&quot;&gt;&lt;a href=&quot;#远程仓库&quot; class=&quot;headerlink&quot; title=&quot;远程仓库&quot;&gt;&lt;/a&gt;远程仓库&lt;/h1&gt;&lt;h2 id=&quot;前置工作&quot;&gt;&lt;a href=&quot;#前置工作&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://deardeer.tech/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="https://deardeer.tech/tags/Git/"/>
+    
+      <category term="教程" scheme="https://deardeer.tech/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="CLI" scheme="https://deardeer.tech/tags/CLI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习使用Git（一）</title>
     <link href="https://deardeer.tech/xue-xi-shi-yong-git-yi/"/>
     <id>https://deardeer.tech/xue-xi-shi-yong-git-yi/</id>
     <published>2021-01-05T02:15:39.000Z</published>
-    <updated>2021-01-05T07:20:25.751Z</updated>
+    <updated>2021-01-05T08:09:13.410Z</updated>
     
     <summary type="html">
     
