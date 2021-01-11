@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deardeer.tech/"/>
-  <updated>2021-01-06T07:04:22.664Z</updated>
+  <updated>2021-01-11T14:28:32.720Z</updated>
   <id>https://deardeer.tech/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>.gitignore配置语法</title>
+    <link href="https://deardeer.tech/gitignore-pei-zhi-yu-fa/"/>
+    <id>https://deardeer.tech/gitignore-pei-zhi-yu-fa/</id>
+    <published>2021-01-11T14:03:01.000Z</published>
+    <updated>2021-01-11T14:28:32.720Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件啦，等等，每次&lt;code&gt;git
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://deardeer.tech/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="https://deardeer.tech/tags/Git/"/>
+    
+      <category term="gitignore" scheme="https://deardeer.tech/tags/gitignore/"/>
+    
+      <category term="配置" scheme="https://deardeer.tech/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>学习使用Git（二）</title>
