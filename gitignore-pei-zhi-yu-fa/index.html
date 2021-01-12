@@ -496,7 +496,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件啦，等等，每次<code>git status</code>都会显示<code>Untracked files ...</code>，有强迫症的童鞋心里肯定不爽。</p>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件啦，等等，每次<code>git status</code>都会显示<code>Untracked files ...</code>，有强迫症的童鞋心里肯定不爽。</p>
 <p>好在Git考虑到了大家的感受，这个问题解决起来也很简单，在Git工作区的根目录下创建一个特殊的<code>.gitignore</code>文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。</p>
 <p>不需要从头写<code>.gitignore</code>文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：<a href="https://github.com/github/gitignore" target="_blank" rel="noopener">https://github.com/github/gitignore</a></p>
 <p>忽略文件的原则是：</p>
@@ -505,7 +505,7 @@
 <li>忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的<code>.class</code>文件；</li>
 <li>忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。</li>
 </ol>
-<h1 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h1><ul>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><ul>
 <li>空行不匹配任何文件，所以可以用空行来增强<code>gitignore</code>规则的可读性</li>
 <li>注释行以<code>#</code>开头。可以在<code>#</code>前加一个反斜杠转义之，使之能够匹配包含<code>#字符</code>的文件夹或文件</li>
 <li>如果每一行最后尾随的空格没有用反斜杠转义，那么这些空格是无效的，不会作为规则的一部分</li>
@@ -522,7 +522,7 @@
 <li>如果规则是<code>斜杠/</code>后跟两个星号，然后再跟一个斜杠的形式，这里的两个星号就会匹配<code>0+</code>个目录，这里的<code>0+</code>是指可以没有，也可以是多个。再举个例子，比如<code>a/**/b</code>会匹配<code>a/b</code>、<code>a/x/b</code>、<code>a/x/y/b</code>这些</li>
 <li>其他形式的连续星号都认为是非法的</li>
 </ul>
-<h1 id="规则总结"><a href="#规则总结" class="headerlink" title="规则总结"></a>规则总结</h1><ul>
+<h2 id="规则总结"><a href="#规则总结" class="headerlink" title="规则总结"></a>规则总结</h2><ul>
 <li>匹配模式可以<strong>以（/）开头</strong>防止递归。</li>
 <li>匹配模式可以<strong>以（/）结尾</strong>指定目录。</li>
 <li>要忽略指定模式以外的文件或目录，可以在模式前加上<strong>惊叹号（!）取反</strong>。</li>
@@ -548,7 +548,7 @@ fd1/*　　　
 
 !/fw/bin/
 !/fw/sf/             
-#不忽略 根目录下的 /fw/bin/ 和 /fw/sf/ 目录；</code></pre><h1 id="gitignore文件添加"><a href="#gitignore文件添加" class="headerlink" title="gitignore文件添加"></a>gitignore文件添加</h1><h2 id="Git在添加-gitignore之前就push了项目"><a href="#Git在添加-gitignore之前就push了项目" class="headerlink" title="Git在添加.gitignore之前就push了项目"></a>Git在添加.gitignore之前就push了项目</h2><p>（为避免冲突可以先同步下远程仓库 <code>git pull</code>）</p>
+#不忽略 根目录下的 /fw/bin/ 和 /fw/sf/ 目录；</code></pre><h2 id="gitignore文件添加"><a href="#gitignore文件添加" class="headerlink" title="gitignore文件添加"></a>gitignore文件添加</h2><h3 id="Git在添加-gitignore之前就push了项目"><a href="#Git在添加-gitignore之前就push了项目" class="headerlink" title="Git在添加.gitignore之前就push了项目"></a>Git在添加.gitignore之前就push了项目</h3><p>（为避免冲突可以先同步下远程仓库 <code>git pull</code>）</p>
 <pre class="line-numbers language-bash"><code class="language-bash">// 在本地项目目录下删除暂存区内容： 
 <span class="token function">git</span> <span class="token function">rm</span> -r --cached <span class="token keyword">.</span>
 
@@ -562,7 +562,7 @@ fd1/*　　　
 
 // 最后<span class="token variable"><span class="token variable">`</span>push<span class="token variable">`</span></span>即可
 <span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="Git-push完文件后想要修改过滤规则使其生效"><a href="#Git-push完文件后想要修改过滤规则使其生效" class="headerlink" title="Git push完文件后想要修改过滤规则使其生效"></a>Git push完文件后想要修改过滤规则使其生效</h2><pre class="line-numbers language-bash"><code class="language-bash">// 修改完.gitignore 在本地项目目录下
+<h3 id="Git-push完文件后想要修改过滤规则使其生效"><a href="#Git-push完文件后想要修改过滤规则使其生效" class="headerlink" title="Git push完文件后想要修改过滤规则使其生效"></a>Git push完文件后想要修改过滤规则使其生效</h3><pre class="line-numbers language-bash"><code class="language-bash">// 修改完.gitignore 在本地项目目录下
 <span class="token function">git</span> <span class="token function">rm</span> -r --cached <span class="token keyword">.</span>
 <span class="token function">git</span> add <span class="token keyword">.</span>
 <span class="token function">git</span> commit -m<span class="token string">".gitignore update"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
@@ -852,56 +852,58 @@ fd1/*　　　
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/gitignore-pei-zhi-yu-fa/">
+                <a href="/dfs-sheng-cheng-pai-lie-zu-he/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/17.jpg" class="responsive-img" alt=".gitignore配置语法">
+                        <img src="https://cdn.jsdelivr.net/gh/deardeer7/deardeer7.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="DFS生成排列组合">
                         
-                        <span class="card-title">.gitignore配置语法</span>
+                        <span class="card-title">DFS生成排列组合</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            gitignore配置语法学习。
+                            利用DFS生成排列组合。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-12
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Git/" class="post-category">
-                                    Git
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
-                    <a href="/tags/gitignore/">
-                        <span class="chip bg-color">gitignore</span>
+                    <a href="/tags/DFS/">
+                        <span class="chip bg-color">DFS</span>
                     </a>
                     
-                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">配置</span>
+                    <a href="/tags/%E6%8E%92%E5%88%97/">
+                        <span class="chip bg-color">排列</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BB%84%E5%90%88/">
+                        <span class="chip bg-color">组合</span>
                     </a>
                     
                 </div>
@@ -1194,7 +1196,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.3k</span>&nbsp;字
+                class="white-color">31.7k</span>&nbsp;字
             
             
             
