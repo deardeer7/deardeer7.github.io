@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deardeer.tech/"/>
-  <updated>2021-01-12T06:48:59.915Z</updated>
+  <updated>2021-01-24T08:22:17.495Z</updated>
   <id>https://deardeer.tech/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[LeetCode]1734. Decode XORed Permutation</title>
+    <link href="https://deardeer.tech/leetcode-1734-decode-xored-permutation/"/>
+    <id>https://deardeer.tech/leetcode-1734-decode-xored-permutation/</id>
+    <published>2021-01-24T07:40:14.000Z</published>
+    <updated>2021-01-24T08:22:17.495Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.com/problems/decode-xored-permutation/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="https://deardeer.tech/categories/LeetCode/"/>
+    
+    
+      <category term="C++" scheme="https://deardeer.tech/tags/C/"/>
+    
+      <category term="算法" scheme="https://deardeer.tech/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="XOR" scheme="https://deardeer.tech/tags/XOR/"/>
+    
+  </entry>
   
   <entry>
     <title>DFS生成排列组合</title>
@@ -609,35 +640,6 @@
       <category term="MATLAB" scheme="https://deardeer.tech/tags/MATLAB/"/>
     
       <category term="函数报错" scheme="https://deardeer.tech/tags/%E5%87%BD%E6%95%B0%E6%8A%A5%E9%94%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://deardeer.tech/hello-world/"/>
-    <id>https://deardeer.tech/hello-world/</id>
-    <published>2020-04-13T16:00:00.000Z</published>
-    <updated>2020-07-18T13:38:06.978Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="博客" scheme="https://deardeer.tech/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="Hello World" scheme="https://deardeer.tech/tags/Hello-World/"/>
-    
-      <category term="hexo" scheme="https://deardeer.tech/tags/hexo/"/>
     
   </entry>
   
