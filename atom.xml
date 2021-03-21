@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://deardeer.tech/"/>
-  <updated>2021-01-24T08:22:17.495Z</updated>
+  <updated>2021-03-21T08:17:52.412Z</updated>
   <id>https://deardeer.tech/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二分答案</title>
+    <link href="https://deardeer.tech/er-fen-da-an/"/>
+    <id>https://deardeer.tech/er-fen-da-an/</id>
+    <published>2021-03-21T07:49:21.000Z</published>
+    <updated>2021-03-21T08:17:52.412Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;二分答案&quot;&gt;&lt;a href=&quot;#二分答案&quot; class=&quot;headerlink&quot; title=&quot;二分答案&quot;&gt;&lt;/a&gt;二分答案&lt;/h2&gt;&lt;h3 id=&quot;什么是二分答案？&quot;&gt;&lt;a href=&quot;#什么是二分答案？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://deardeer.tech/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://deardeer.tech/tags/leetcode/"/>
+    
+      <category term="二分查找" scheme="https://deardeer.tech/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    
+      <category term="C++" scheme="https://deardeer.tech/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>[LeetCode]1734. Decode XORed Permutation</title>
@@ -610,36 +641,6 @@
       <category term="Hexo" scheme="https://deardeer.tech/tags/Hexo/"/>
     
       <category term="Git" scheme="https://deardeer.tech/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MATLAB报错：未定义函数或变量</title>
-    <link href="https://deardeer.tech/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/"/>
-    <id>https://deardeer.tech/matlab-bao-cuo-wei-ding-yi-han-shu-huo-bian-liang/</id>
-    <published>2020-06-30T07:00:00.000Z</published>
-    <updated>2020-07-18T13:38:06.976Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;最近准备数学建模比赛，学习MATLAB入门遇到了个问题：&lt;code&gt;未定义函数或变量 &#39;myGcd&#39;&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数学建模" scheme="https://deardeer.tech/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
-    
-      <category term="MATLAB" scheme="https://deardeer.tech/tags/MATLAB/"/>
-    
-      <category term="函数报错" scheme="https://deardeer.tech/tags/%E5%87%BD%E6%95%B0%E6%8A%A5%E9%94%99/"/>
     
   </entry>
   
